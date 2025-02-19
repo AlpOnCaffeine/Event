@@ -120,3 +120,118 @@ footer {
     padding: 1rem;
     color: white;
 }
+/*Styles for the carousel and grid on available page.*/
+.product-showcase {
+    width: 90%;
+    margin: auto;
+}
+
+.view-toggle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.view-toggle button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.product-item img {
+    width: 100%; /* Ensures the image takes up the full width of its container */
+    height: auto; /* Maintains the aspect ratio */
+    max-width: 300px; /* Sets a maximum width to prevent excessively large images */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    border-radius: 8px; /* Optional: adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for depth */
+}
+
+/* Carousel styles */
+.carousel-view {
+    display: none; /* Hide by default */
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Grid view specific styles */
+.grid-view .product-item {
+    flex: 1 1 calc(33.333% - 20px); /* Three items per row with space between */
+    margin: 10px;
+}
+
+.grid-view .product-item img {
+    max-width: 100%; /* Ensures images fit within their grid items */
+}
+
+/* Carousel view specific styles */
+.carousel-view .product-item {
+    min-width: 80%; /* Adjusts the visible portion in the carousel */
+    margin: 0 auto; /* Centers the item */
+}
+
+.carousel-view .product-item img {
+    max-width: 100%; /* Ensures images fit within their carousel items */
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+/* Grid styles */
+.grid-view {
+    display: none; /* Hide by default */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    text-align: center;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Show carousel by default */
+.carousel-view {
+    display: block;
+}
