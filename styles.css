@@ -1,4 +1,5 @@
 /* Reset some default browser styles */
+
 body, h1, ul {
     margin: 0;
     padding: 0;
@@ -43,6 +44,7 @@ nav ul li a:hover {
     background-color: #290A38;
     border-radius: 5px;
 }
+
 /* Responsive Design */
 @media (max-width: 768px) {
     header {
@@ -114,7 +116,15 @@ h1,h2{
         grid-template-columns: 1fr 1fr;
     }
 }
+/* Sets the whole page on a flex box to ensure the content is spaced correctly and that the footer is at the bottom of the page. */
+.content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Uses the full view height */
+}
 
+
+/* Footer styles */
 footer {
     text-align: center;
     padding: 1rem;
@@ -212,22 +222,87 @@ footer {
     }
 }
 
-/* Styles for the videos on artists page */
-#video-gallery {
-    width: 100%;
+/* Styles for the contact page */
+/* Styles for the chatbox-with-tail */
+.contact-main{
+    display: flex; /* Enables the use of flexbox properties */
+    flex: 1;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
     padding: 20px;
-    box-sizing: border-box;
+    height: auto; 
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.contact-container {
+    margin: 50px auto;
+    padding: 20px;
+    width: 485px;
+    line-height: 1.6;
 }
 
-.video-container {
+.chatbox {
+    position: relative;
+    background-color: rgb(241, 198, 247); /* Light purple */
+    border-radius: 20px;
+    padding: 15px;
+    max-width: 90%;
+    color: #290A38;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.chatbox::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: #F1C6F7;
+    border-bottom: 0;
+    margin-left: -10px;
+    margin-bottom: -20px;
+}
+
+.contact-icons {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
+    justify-content: space-evenly;
 }
 
-.video-container iframe {
-    max-width: 100%;
-    border: none; /* Removes the default iframe border */
-    aspect-ratio: 16 / 9; /* Maintains a 16:9 aspect ratio */
+.contact-icons div {
+    align-items: center;
+    display: flex;
+    margin: 20px auto;
+}
+
+.contact-icons img {
+    width: 40px; /* Adjust size as needed */
+    margin-right: 10px;
+}
+
+span {
+    color: #FFF; /* White color for the text */
+    font-size: 14px;
+}
+
+/* Icons color change. */
+.contact-icons img {
+    filter: invert(100%); /* Makes black icons white */
+}
+
+/* contact page h1 tag */
+.contact-main h1 {
+    color: #290A38; /* Change the color */
+    font-size: 24px; /* Set the font size */
+    text-align: left; /* Align the text to the center */
+    font-weight: bold; /* Make the font bold */
+    padding: 10px; /* Add padding above and below the text */
+}
+.contact-main p{
+    padding-top: 0;
+    padding-bottom: 0;
+    padding: 25px;
+    font-size: 18px;
 }
