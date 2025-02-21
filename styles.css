@@ -211,3 +211,23 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* Styles for the videos on artists page */
+#video-gallery {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.video-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.video-container iframe {
+    max-width: 100%;
+    border: none; /* Removes the default iframe border */
+    aspect-ratio: 16 / 9; /* Maintains a 16:9 aspect ratio */
+}
