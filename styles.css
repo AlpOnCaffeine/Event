@@ -306,3 +306,52 @@ span {
     padding: 25px;
     font-size: 18px;
 }
+/* Styles for the form on contact page */
+form {
+    margin: 20px auto;
+    padding: 20px;
+    color: #F1C6F7; /* Uses text color based on theme */
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 380px;
+
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color); /* Ensures label text follows theme */
+}
+
+input[type="text"], input[type="radio"] {
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff00b3; /* Ensure this is the variable used */
+    color: #290A38;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333; /* This is specifically for hover state */
+    color: #ff00b3;
+}
+
+/*Styles the icons to size*/
+img.icon {
+    vertical-align: middle;
+    width: 24px; /* Adjust size as necessary */
+    filter: brightness(0) saturate(95%) invert(56%) sepia(90%) saturate(429%) hue-rotate(246deg) brightness(99%) contrast(101%); /* changes the icon img color to match the pick the best I can. Not an SVG. */
+}
