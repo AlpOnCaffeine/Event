@@ -95,3 +95,8 @@ nav ul li a:hover {
     border: none; /* Removes the default iframe border */
     aspect-ratio: 16 / 9; /* Maintains a 16:9 aspect ratio */
 }
+
+iframe {
+    border: none; /* This removes the border around iframes */
+}
+
