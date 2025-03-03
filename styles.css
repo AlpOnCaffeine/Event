@@ -77,6 +77,11 @@ h1,h2{
     gap: 1rem;
     padding: 1rem;
 }
+.event-summary{
+    letter-spacing: 1.5px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1rem;
+}
 
 .left-column, .right-column {
     padding: 1rem;
@@ -354,4 +359,48 @@ img.icon {
     vertical-align: middle;
     width: 24px; /* Adjust size as necessary */
     filter: brightness(0) saturate(95%) invert(56%) sepia(90%) saturate(429%) hue-rotate(246deg) brightness(99%) contrast(101%); /* changes the icon img color to match the pick the best I can. Not an SVG. */
+}
+
+/* Styles for the lightbox model that allows img to be enlarged. */
+.lightbox-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1050; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 90%; /* width */
+    height: auto; /* Adjusted height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+.modal-content {
+    display: block;
+    max-width: 90%; /* Max width of the image to be 90% of the viewport */
+    max-height: 80vh; /* Max height to be 80% of the viewport height */
+    margin: auto; /* Center the image horizontally */
+    object-fit: contain; /* Ensures the image is scaled properly without being cropped */
+}
+
+.close {
+    position: absolute;
+    top: 20px; /* Position close button in the top right corner */
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+#caption {
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: auto; /* Adjust based on content */
 }
